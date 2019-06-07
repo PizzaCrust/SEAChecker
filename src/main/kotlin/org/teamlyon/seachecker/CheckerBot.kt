@@ -40,6 +40,7 @@ class IntroHandler: ListenerAdapter() {
     }
     override fun onGuildMemberJoin(event: GuildMemberJoinEvent) {
         intro(event.member)
+        ignoreList.add(event.member)
     }
 
     override fun onMessageReceived(event: MessageReceivedEvent) {
